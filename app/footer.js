@@ -77,7 +77,7 @@ function Footer() {
             © Copyrights 2022. <span className='font-bold'>Comapny Name</span> All Rights Reserved. 
         </div>
         <div className="md:mx-10">
-            Powered By<Link href="https://flowbite.com/">DAS360</Link>
+            Powered By&nbsp;<Link href="https://flowbite.com/">DAS360</Link>
         </div>
     </div>
 </footer>

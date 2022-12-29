@@ -42,14 +42,15 @@ a{
 }
 header{
   position: relative;
-  z-index: 1;
+  position: sticky;
+  top:0;
 }
 
 .nav__menu-list{
   display: flex;
   flex-direction: column;
   position: fixed;
-  top:72px;
+  top:82px;
   width: 288px;
   row-gap: 24px;
   left: -288px;

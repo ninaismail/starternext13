@@ -1,10 +1,22 @@
 import Footer from './footer';
 import './globals.css'
 import Navbar from './main-header';
+import { Roboto, Cairo } from "@next/font/google";
 
-function RootLayout({children}) {
+const roboto = Roboto({
+  weight: "400",
+  display: "swap",
+  subsets: ['latin']
+});
+const cairo = Cairo({
+  weight: "400",
+  display: "swap"
+});
+function RootLayout({locale,children}) {
     return (
-      <html lang="en">
+      <html lang="en" className={`${locale==="en" ? `${roboto.className}` : `${cairo.className}`}`}>
+      <head>      
+      </head>
       <body>
         <Navbar/>
         {children}

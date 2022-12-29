@@ -32,7 +32,7 @@ const Navbar = () => {
     <Link href={"/"} className="logo">
       <Image src="/images/logo.png" width="100" height="50" alt="Company Name" />
     </Link>      
-    <div className={`font-Roboto ${navActive ? "active" : ""} nav__menu-list `}>
+    <div className={`${navActive ? "active" : ""} nav__menu-list `}>
       {MENU_LIST.map((menu, idx) => (
         <div 
           onClick={() => {

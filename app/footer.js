@@ -10,7 +10,7 @@ function Footer() {
 <footer>
     <div className="flex flex-wrap md:flex-nowrap gap-8 py-8 px-6">
         <div className="md:w-1/3">
-            <h2 className="font-RobotoSlab mb-6 text-blue-500 md:text-4xl text-2xl md:w-1/2 pb-4 border-b-2 border-blue-500">
+            <h2 className="mb-6 text-blue-500 md:text-4xl text-2xl md:w-1/2 pb-4 border-b-2 border-blue-500">
             Quick Links
             </h2>
             <ul className='font-Roboto'>
@@ -29,7 +29,7 @@ function Footer() {
             </ul>
         </div>
         <div className="md:w-1/3">
-            <h2 className="font-RobotoSlab mb-6 text-blue-500 md:text-4xl text-2xl md:w-1/2 pb-4 border-b-2 border-blue-500">
+            <h2 className=" mb-6 text-blue-500 md:text-4xl text-2xl md:w-1/2 pb-4 border-b-2 border-blue-500">
             Contact Info
             </h2>
             <ul className='font-Roboto'>
@@ -64,14 +64,14 @@ function Footer() {
             </ul>
         </div>   
         <div className="md:w-1/3">
-        <h2 className="font-RobotoSlab mb-6 text-blue-500 md:text-4xl text-2xl md:w-1/2 pb-4 border-b-2 border-blue-500">
+        <h2 className=" mb-6 text-blue-500 md:text-4xl text-2xl md:w-1/2 pb-4 border-b-2 border-blue-500">
             Location
             </h2>
             <div id="map" className="mb-4 md:text-3xl text-2xl">
 \           </div>
         </div>             
     </div>
-    <div dir="ltr"className="font-Roboto py-6 px-4 md:flex md:items-center 
+    <div dir="ltr"className="py-6 px-4 md:flex md:items-center 
     md:justify-around">
         <div className="md:mx-10">
             © Copyrights 2022. <span className='font-bold'>Comapny Name</span> All Rights Reserved. 

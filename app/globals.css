@@ -53,7 +53,7 @@ header{
   top:82px;
   width: 288px;
   row-gap: 24px;
-  left: -288px;
+  right: -288px;
   padding: 24px 16px;
   transition: all 0.2s;
   min-height: calc(100vh - 60px);

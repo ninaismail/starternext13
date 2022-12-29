@@ -29,6 +29,9 @@ const Navbar = () => {
 <header>
 {isOpen && <div className="overlay"></div>}
   <nav className="bg-blue-200 p-[16px] flex justify-between items-center">
+    <Link href={"/"} className="logo">
+      <Image src="/images/logo.png" width="100" height="50" alt="Company Name" />
+    </Link>      
     <div className={`font-Roboto ${navActive ? "active" : ""} nav__menu-list `}>
       {MENU_LIST.map((menu, idx) => (
         <div 
@@ -50,9 +53,6 @@ const Navbar = () => {
       <span className="icon-bar"></span>
       <span className="icon-bar"></span>
     </button>  
-    <Link href={"/"} className="logo">
-      <Image src="/images/logo.png" width="100" height="50" alt="Company Name" />
-    </Link>    
   </nav>
 </header>
   );

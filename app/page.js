@@ -1,24 +1,26 @@
 "use client";
 
-import axios from 'axios';
+import axios from './lib/axios';
 import { useEffect, useState } from "react";
+// import { useRouter } from "next/navigation";
+
 import Head from "next/head";
 import Pagination from "./Pagination";
 import { paginate } from "./paginate";
 import {BsChevronLeft,BsChevronRight} from 'react-icons/bs'
 
-
 export default function Page() {
+  // const { locale } = useRouter();
+
   // To hold the actual data
   const [data, setData] = useState([])
   const [loading, setLoading] = useState(true);
-
   const [currentPage, setCurrentPage] = useState(1);
-
+  
     const pageSize = 10;
  
     useEffect(() => {
-      axios.get('https://jsonplaceholder.typicode.com/posts')
+      axios.get('http://localhost:8000/api/posts')
         .then(res => {
                 setData(res.data);
                 setLoading(false);
@@ -28,16 +30,16 @@ export default function Page() {
             })
      }, [])   
     console.log(data)
-    
+ 
     const onPageChange = (page) =>{
       setCurrentPage(page);
       console.log(page)
     };
     const onPrev = () => {
-      if(currentPage !== 1) setCurrentPage(currentPage - 1)
+      if(currentPage > 1) setCurrentPage(currentPage - 1)
     }    
     const onNext = () => {
-      if(currentPage !== pageSize) setCurrentPage(currentPage + 1)
+      if(currentPage < pageSize) setCurrentPage(currentPage + 1)
     }
 
     const paginatedPosts = paginate(data, currentPage, pageSize);
@@ -55,9 +57,9 @@ export default function Page() {
     <p>
       Page: <span style={{ color: "red" }}>{currentPage}</span>
     </p>
-
+{/* {locale==="en-US" ? `${item.name.name}` : `${item.name.name_ar}`} */}
   {paginatedPosts.map((item) => {
-    return <p key={item.id}>{item.title}</p>;
+    return <p key={item.id}>{item.name}</p>;
   })} 
   <nav aria-label="Page navigation" className="inline-flex flex-wrap">
     <button 

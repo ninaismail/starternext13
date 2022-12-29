@@ -14,13 +14,17 @@ const Navbar = () => {
   const [activeIdx, setActiveIdx] = useState(-1);
   
   const [selectAria, setSelectAria] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
 
   const handleClick= () => {
-    setNavActive(!navActive);
+    setNavActive(!navActive)
     setSelectAria(!selectAria)
+    setIsOpen(!isOpen)
   };
+
   return (
 <header>
+{isOpen && <div className="overlay"></div>}
 <nav className="bg-blue-200 p-[16px] flex justify-between items-center">
     <div className={`font-Roboto ${navActive ? "active" : ""} nav__menu-list `}>
       {MENU_LIST.map((menu, idx) => (

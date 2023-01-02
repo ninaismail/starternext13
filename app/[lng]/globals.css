@@ -45,6 +45,7 @@ header{
   position: relative;
   position: sticky;
   top:0;
+  z-index: 10;
 }
 
 .nav__menu-list{
@@ -58,7 +59,7 @@ header{
   padding: 24px 16px;
   transition: all 0.2s;
   min-height: calc(100vh - 60px);
-  background-color: #fff
+  background-color: #fff;
 }
 .nav__menu-list.active{
   left: 0;

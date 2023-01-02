@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@material-tailwind/react": "^1.2.4",
     "@next/font": "^13.1.1",
     "accept-language": "^3.0.18",
     "axios": "^1.2.1",
